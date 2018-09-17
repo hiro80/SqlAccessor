@@ -1,0 +1,15 @@
+C:\Users\hiropy\Desktop\GenericSQL\Foundation\bin\Debug\Foundation.dll
+C:\Users\hiropy\Desktop\GenericSQL\Foundation\bin\Debug\Foundation.pdb
+C:\Users\hiropy\Desktop\GenericSQL\Foundation\obj\Debug\Foundation.dll
+C:\Users\hiropy\Desktop\GenericSQL\Foundation\obj\Debug\Foundation.pdb
+C:\Users\hiropy\Desktop\GenericSQL\Foundation\obj\Debug\Foundation.csprojResolveAssemblyReference.cache
+M:\Programs\DbAccessor\Bin\Foundation.dll
+M:\Programs\DbAccessor\Bin\Foundation.pdb
+M:\Programs\DbAccessor\Src\Foundation\obj\Debug\Foundation.csprojResolveAssemblyReference.cache
+M:\Programs\DbAccessor\Src\Foundation\obj\Debug\Foundation.dll
+M:\Programs\DbAccessor\Src\Foundation\obj\Debug\Foundation.pdb
+M:\Programs\SqlAccessor\Bin\Foundation.dll
+M:\Programs\SqlAccessor\Src\Foundation\obj\Debug\Foundation.csprojResolveAssemblyReference.cache
+M:\Programs\SqlAccessor\Src\Foundation\obj\Debug\Foundation.dll
+M:\Programs\SqlAccessor\Src\Foundation\obj\Debug\Foundation.pdb
+M:\Programs\SqlAccessor\Bin\Foundation.pdb

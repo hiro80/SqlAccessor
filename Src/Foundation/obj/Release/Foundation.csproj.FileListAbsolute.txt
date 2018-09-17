@@ -1,0 +1,4 @@
+C:\Users\hiropy\Desktop\MiniSqlParser\Foundation\bin\Release\Foundation.dll
+C:\Users\hiropy\Desktop\MiniSqlParser\Foundation\bin\Release\Foundation.pdb
+C:\Users\hiropy\Desktop\MiniSqlParser\Foundation\obj\Release\Foundation.dll
+C:\Users\hiropy\Desktop\MiniSqlParser\Foundation\obj\Release\Foundation.pdb
