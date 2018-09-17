@@ -1,0 +1,9 @@
+M:\Programs\DbAccessor\Src\Testers\SqlBuilderTester\obj\Debug\SqlBuilderTester.csprojResolveAssemblyReference.cache
+M:\Programs\DbAccessor\Src\Testers\SqlBuilderTester\obj\Debug\Tester.Form1.resources
+M:\Programs\DbAccessor\Src\Testers\SqlBuilderTester\obj\Debug\Tester.Properties.Resources.resources
+M:\Programs\DbAccessor\Src\Testers\SqlBuilderTester\obj\Debug\SqlBuilderTester.csproj.GenerateResource.Cache
+M:\Programs\DbAccessor\Bin\SqlBuilderTester.exe.config
+M:\Programs\DbAccessor\Bin\SqlBuilderTester.exe
+M:\Programs\DbAccessor\Bin\SqlBuilderTester.pdb
+M:\Programs\DbAccessor\Src\Testers\SqlBuilderTester\obj\Debug\SqlBuilderTester.exe
+M:\Programs\DbAccessor\Src\Testers\SqlBuilderTester\obj\Debug\SqlBuilderTester.pdb

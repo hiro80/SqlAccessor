@@ -1,0 +1,99 @@
+M:\Programs\GenericSQL\Tester\bin\Debug\Tester.exe.config
+M:\Programs\GenericSQL\Tester\obj\Debug\Tester.exe
+M:\Programs\GenericSQL\Tester\obj\Debug\Tester.pdb
+M:\Programs\GenericSQL\Tester\bin\Debug\Tester.exe
+M:\Programs\GenericSQL\Tester\bin\Debug\Tester.pdb
+M:\Programs\GenericSQL\Tester\bin\Debug\GenericSQL.dll
+M:\Programs\GenericSQL\Tester\bin\Debug\Antlr4.Runtime.Standard.dll
+M:\Programs\GenericSQL\Tester\bin\Debug\GenericSQL.pdb
+M:\Programs\GenericSQL\Tester\obj\Debug\Tester.csprojResolveAssemblyReference.cache
+M:\Programs\GenericSQL\Tester\obj\Debug\Tester.Form1.resources
+M:\Programs\GenericSQL\Tester\obj\Debug\Tester.Properties.Resources.resources
+M:\Programs\GenericSQL\Tester\obj\Debug\Tester.csproj.GenerateResource.Cache
+C:\Users\hiropy\Desktop\GenericSQL\Tester\bin\Debug\Tester.exe.config
+C:\Users\hiropy\Desktop\GenericSQL\Tester\bin\Debug\Tester.exe
+C:\Users\hiropy\Desktop\GenericSQL\Tester\bin\Debug\Tester.pdb
+C:\Users\hiropy\Desktop\GenericSQL\Tester\obj\Debug\Tester.Form1.resources
+C:\Users\hiropy\Desktop\GenericSQL\Tester\obj\Debug\Tester.Properties.Resources.resources
+C:\Users\hiropy\Desktop\GenericSQL\Tester\obj\Debug\Tester.csproj.GenerateResource.Cache
+C:\Users\hiropy\Desktop\GenericSQL\Tester\obj\Debug\Tester.exe
+C:\Users\hiropy\Desktop\GenericSQL\Tester\obj\Debug\Tester.pdb
+C:\Users\hiropy\Desktop\GenericSQL\Tester\bin\Debug\nunit.framework.xml
+C:\Users\hiropy\Desktop\GenericSQL\Tester\obj\Debug\Tester.csprojResolveAssemblyReference.cache
+C:\Users\hiropy\Desktop\GenericSQL\Tester\bin\Debug\GenericSQL.dll
+C:\Users\hiropy\Desktop\GenericSQL\Tester\bin\Debug\Antlr4.Runtime.Standard.dll
+C:\Users\hiropy\Desktop\GenericSQL\Tester\bin\Debug\GenericSQL.pdb
+C:\Users\hiropy\Desktop\GenericSQL\Tester\bin\Debug\SqlBuilder.dll
+C:\Users\hiropy\Desktop\GenericSQL\Tester\bin\Debug\Foundation.dll
+C:\Users\hiropy\Desktop\GenericSQL\Tester\bin\Debug\SqlBuilder.pdb
+C:\Users\hiropy\Desktop\GenericSQL\Tester\bin\Debug\Foundation.pdb
+C:\Users\hiropy\Desktop\GenericSQL\Tester\bin\Debug\nunit.framework.dll
+C:\Users\hiropy\Desktop\GenericSQL_\Tester\bin\Debug\Tester.exe.config
+C:\Users\hiropy\Desktop\GenericSQL_\Tester\obj\Debug\Tester.exe
+C:\Users\hiropy\Desktop\GenericSQL_\Tester\obj\Debug\Tester.pdb
+C:\Users\hiropy\Desktop\miniSqlParser\Tester\obj\Debug\Tester.csprojResolveAssemblyReference.cache
+C:\Users\hiropy\Desktop\miniSqlParser\Tester\obj\Debug\Tester.Form1.resources
+C:\Users\hiropy\Desktop\miniSqlParser\Tester\obj\Debug\Tester.Properties.Resources.resources
+C:\Users\hiropy\Desktop\miniSqlParser\Tester\obj\Debug\Tester.csproj.GenerateResource.Cache
+C:\Users\hiropy\Desktop\MiniSqlParser\Tester\bin\Debug\Tester.exe.config
+C:\Users\hiropy\Desktop\MiniSqlParser\Tester\bin\Debug\Tester.exe
+C:\Users\hiropy\Desktop\MiniSqlParser\Tester\bin\Debug\Tester.pdb
+C:\Users\hiropy\Desktop\MiniSqlParser\Tester\bin\Debug\Foundation.dll
+C:\Users\hiropy\Desktop\MiniSqlParser\Tester\bin\Debug\MiniSqlParser.dll
+C:\Users\hiropy\Desktop\MiniSqlParser\Tester\bin\Debug\nunit.framework.dll
+C:\Users\hiropy\Desktop\MiniSqlParser\Tester\bin\Debug\SqlBuilder.dll
+C:\Users\hiropy\Desktop\MiniSqlParser\Tester\bin\Debug\Antlr4.Runtime.Standard.dll
+C:\Users\hiropy\Desktop\MiniSqlParser\Tester\bin\Debug\Foundation.pdb
+C:\Users\hiropy\Desktop\MiniSqlParser\Tester\bin\Debug\MiniSqlParser.pdb
+C:\Users\hiropy\Desktop\MiniSqlParser\Tester\bin\Debug\nunit.framework.xml
+C:\Users\hiropy\Desktop\MiniSqlParser\Tester\bin\Debug\SqlBuilder.pdb
+C:\Users\hiropy\Desktop\MiniSqlParser\Tester\obj\Debug\Tester.exe
+C:\Users\hiropy\Desktop\MiniSqlParser\Tester\obj\Debug\Tester.pdb
+C:\Users\hiropy\Desktop\MiniSqlParser\Tester\bin\Debug\Antlr4.Runtime.Standard.pdb
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\bin\Debug\Tester.exe.config
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\obj\Debug\Tester.exe
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\obj\Debug\Tester.pdb
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\obj\Debug\Tester.csprojResolveAssemblyReference.cache
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\obj\Debug\Tester.Form1.resources
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\obj\Debug\Tester.Properties.Resources.resources
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\obj\Debug\Tester.csproj.GenerateResource.Cache
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\bin\Debug\Tester.exe
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\bin\Debug\Tester.pdb
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\bin\Debug\Foundation.dll
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\bin\Debug\MiniSqlParser.dll
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\bin\Debug\SqlBuilder.dll
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\bin\Debug\Antlr4.Runtime.Standard.dll
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\bin\Debug\Foundation.pdb
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\bin\Debug\MiniSqlParser.pdb
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\bin\Debug\nunit.framework.xml
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\bin\Debug\SqlBuilder.pdb
+C:\Users\hiropy\Desktop\New folder\MiniSqlParser\Tester\bin\Debug\Antlr4.Runtime.Standard.pdb
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\bin\Debug\Tester.exe.config
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\bin\Debug\Tester.exe
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\bin\Debug\Tester.pdb
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\bin\Debug\Foundation.dll
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\bin\Debug\nunit.framework.dll
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\bin\Debug\Foundation.pdb
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\bin\Debug\nunit.framework.xml
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\obj\Debug\Tester.csprojResolveAssemblyReference.cache
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\obj\Debug\Tester.Form1.resources
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\obj\Debug\Tester.Properties.Resources.resources
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\obj\Debug\Tester.csproj.GenerateResource.Cache
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\obj\Debug\Tester.exe
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\obj\Debug\Tester.pdb
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\bin\Debug\MiniSqlParser.pdb
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\bin\Debug\SqlBuilder.dll
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\bin\Debug\Antlr4.Runtime.Standard.pdb
+C:\Users\hiropy\Desktop\SqlBuilder\Tester\bin\Debug\SqlBuilder.pdb
+M:\Programs\SqlBuilder\Tester\bin\Debug\Tester.exe.config
+M:\Programs\SqlBuilder\Tester\obj\Debug\Tester.exe
+M:\Programs\SqlBuilder\Tester\obj\Debug\Tester.pdb
+M:\Programs\SqlAccessor\Bin\Tester.exe.config
+M:\Programs\SqlAccessor\Src\Tester\obj\Debug\Tester.exe
+M:\Programs\SqlAccessor\Src\Tester\obj\Debug\Tester.pdb
+M:\Programs\SqlAccessor\Bin\Tester.exe
+M:\Programs\SqlAccessor\Bin\Tester.pdb
+M:\Programs\SqlAccessor\Src\Tester\obj\Debug\Tester.Form1.resources
+M:\Programs\SqlAccessor\Src\Tester\obj\Debug\Tester.Properties.Resources.resources
+M:\Programs\SqlAccessor\Src\Tester\obj\Debug\Tester.csproj.GenerateResource.Cache
+M:\Programs\SqlAccessor\Src\Tester\obj\Debug\Tester.csprojResolveAssemblyReference.cache
