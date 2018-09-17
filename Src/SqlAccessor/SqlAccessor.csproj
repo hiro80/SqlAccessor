@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C013B70-9539-457D-BC2E-5E8A8FBF79D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SqlAccessor</RootNamespace>
+    <AssemblyName>SqlAccessor</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Foundation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin\Foundation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MiniSqlParser">
+      <HintPath>..\..\..\miniSqlParser\MiniSqlParser\bin\Debug\MiniSqlParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess">
+      <HintPath>..\..\Bin\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caster\CastEditor\CastEditor.cs" />
+    <Compile Include="Caster\CastEditor\ICastEditor.cs" />
+    <Compile Include="Caster\Caster.cs" />
+    <Compile Include="Caster\DataTypeMapper\IDataTypeMapper.cs" />
+    <Compile Include="Caster\DataTypeMapper\MsSqlDataTypeMapper.cs" />
+    <Compile Include="Caster\DataTypeMapper\OracleDataTypeMapper.cs" />
+    <Compile Include="Caster\DataTypeMapper\PsqlDataTypeMapper.cs" />
+    <Compile Include="Caster\DataTypeMapper\SqliteDataTypeMapper.cs" />
+    <Compile Include="Caster\ICaster.cs" />
+    <Compile Include="Caster\PropertyType\PropertyType.cs" />
+    <Compile Include="Caster\SqlLiteralType\SqlLiteralType.cs" />
+    <Compile Include="Caster\SqlLiteralType\SqlLiteralTypes.cs" />
+    <Compile Include="Caster\ViewColumnType\ViewColumnType.cs" />
+    <Compile Include="Caster\ViewColumnType\ViewColumnTypes.cs" />
+    <Compile Include="Db\Db.cs" />
+    <Compile Include="Db\DbConn\DbConn.cs" />
+    <Compile Include="Db\DbConn\DbConnProxy.cs" />
+    <Compile Include="Db\DbConn\DbConnState\End.cs" />
+    <Compile Include="Db\DbConn\DbConnState\Error1.cs" />
+    <Compile Include="Db\DbConn\DbConnState\Error2.cs" />
+    <Compile Include="Db\DbConn\DbConnState\IDbConnState.cs" />
+    <Compile Include="Db\DbConn\DbConnState\NoConnection.cs" />
+    <Compile Include="Db\DbConn\DbConnState\NoTransaction.cs" />
+    <Compile Include="Db\DbConn\DbConnState\Rollbacked.cs" />
+    <Compile Include="Db\DbConn\DbConnState\Transaction.cs" />
+    <Compile Include="Db\DbConn\Debug\LoggingDataReader.cs" />
+    <Compile Include="Db\DbConn\Debug\LoggingDbConnection.cs" />
+    <Compile Include="Db\DbConn\Debug\LoggingDbTransaction.cs" />
+    <Compile Include="Db\DbConn\IDbConn.cs" />
+    <Compile Include="Db\DbConn\MsSqlDbConn.cs" />
+    <Compile Include="Db\DbConn\OdbcDbConn.cs" />
+    <Compile Include="Db\DbConn\OracleDbConn.cs" />
+    <Compile Include="Db\DbConn\PsqlDbConn.cs" />
+    <Compile Include="Db\DbConn\SqliteDbConn.cs" />
+    <Compile Include="Db\DbConn\SqliteOdbcDbConn.cs" />
+    <Compile Include="Db\DbParameters.cs" />
+    <Compile Include="Db\Logger\ConsoleLogger.cs" />
+    <Compile Include="Db\Logger\ILogger.cs" />
+    <Compile Include="Db\Logger\NullLogger.cs" />
+    <Compile Include="Db\Logger\WindowsEventLogger.cs" />
+    <Compile Include="Db\ResultsCache\IResultsCache.cs" />
+    <Compile Include="Db\ResultsCache\LruResultsCache.cs" />
+    <Compile Include="Db\ResultsCache\MarkovResultsCache\BestRank.cs" />
+    <Compile Include="Db\ResultsCache\MarkovResultsCache\ExpectedState.cs" />
+    <Compile Include="Db\ResultsCache\MarkovResultsCache\ExpectedStates.cs" />
+    <Compile Include="Db\ResultsCache\MarkovResultsCache\MarkovPredictor.cs" />
+    <Compile Include="Db\ResultsCache\MarkovResultsCache\MarkovPredictors.cs" />
+    <Compile Include="Db\ResultsCache\MarkovResultsCache\MarkovResultsCache.cs" />
+    <Compile Include="Db\ResultsCache\MarkovResultsCache\PastStates.cs" />
+    <Compile Include="Db\ResultsCache\NullResultsCache.cs" />
+    <Compile Include="Db\ResultsCache\ResultsCache.cs" />
+    <Compile Include="Db\SqlMaker.cs" />
+    <Compile Include="Db\Tran.cs" />
+    <Compile Include="Db\TranInfo.cs" />
+    <Compile Include="Exceptions\BadFormatRecordException.cs" />
+    <Compile Include="Exceptions\BadFormatSqlPodException.cs" />
+    <Compile Include="Exceptions\CannotConnectToDbException.cs" />
+    <Compile Include="Exceptions\CannotLoadPropertyTypeException.cs" />
+    <Compile Include="Exceptions\CannotRegistToViewMappingException.cs" />
+    <Compile Include="Exceptions\DbAccessException.cs" />
+    <Compile Include="Exceptions\SqlAccessorException.cs" />
+    <Compile Include="Exceptions\DuplicateKeyException.cs" />
+    <Compile Include="Exceptions\InvalidColumnToPropertyCastException.cs" />
+    <Compile Include="Exceptions\InvalidPropertyToColumnCastException.cs" />
+    <Compile Include="Exceptions\MoreThanTwoRecordsException.cs" />
+    <Compile Include="Exceptions\NotExistsSqlEntryName.cs" />
+    <Compile Include="Exceptions\NotExistsTableColumnException.cs" />
+    <Compile Include="Exceptions\NotExistsTableException.cs" />
+    <Compile Include="Exceptions\NotExistsViewColumnException.cs" />
+    <Compile Include="Exceptions\WriteToLockedRecordException.cs" />
+    <Compile Include="Info\Map\IViewInfoGetter.cs" />
+    <Compile Include="Info\Map\RecordViewTableMap.cs" />
+    <Compile Include="Info\Map\RecordViewTableMapFactory.cs" />
+    <Compile Include="Info\RecordInfo\IRecordInfo.cs" />
+    <Compile Include="Info\RecordInfo\RecordInfo.cs" />
+    <Compile Include="Info\TableInfo\ColumnInfo.cs" />
+    <Compile Include="Info\TableInfo\TableInfo.cs" />
+    <Compile Include="Info\TableInfo\TableInfoSet.cs" />
+    <Compile Include="Info\ViewInfo\ViewColumnInfo.cs" />
+    <Compile Include="Info\ViewInfo\ViewInfo.cs" />
+    <Compile Include="LockManager\CNFofEquation.cs" />
+    <Compile Include="LockManager\DbLockManager.cs" />
+    <Compile Include="LockManager\Equation.cs" />
+    <Compile Include="LockManager\ILockManager.cs" />
+    <Compile Include="LockManager\LockManager.cs" />
+    <Compile Include="LockManager\LockManagerProxy.cs" />
+    <Compile Include="LockManager\MemLockManager.cs" />
+    <Compile Include="LockManager\NullLockManager.cs" />
+    <Compile Include="LockManager\RemoteLockManager.cs" />
+    <Compile Include="LockManager\SqliteLockManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\Expressions\AndExp.cs" />
+    <Compile Include="Query\Expressions\Between.cs" />
+    <Compile Include="Query\Expressions\EqualExp.cs" />
+    <Compile Include="Query\Expressions\GreaterThan.cs" />
+    <Compile Include="Query\Expressions\GreaterThanOrEqual.cs" />
+    <Compile Include="Query\Expressions\IElement.cs" />
+    <Compile Include="Query\Expressions\IExp.cs" />
+    <Compile Include="Query\Expressions\InExp.cs" />
+    <Compile Include="Query\Expressions\IsNull.cs" />
+    <Compile Include="Query\Expressions\LessThan.cs" />
+    <Compile Include="Query\Expressions\LessThanOrEqual.cs" />
+    <Compile Include="Query\Expressions\LikeExp.cs" />
+    <Compile Include="Query\Expressions\Literal.cs" />
+    <Compile Include="Query\Expressions\NotEqualExp.cs" />
+    <Compile Include="Query\Expressions\NotExp.cs" />
+    <Compile Include="Query\Expressions\OrExp.cs" />
+    <Compile Include="Query\Expressions\SqlLiteral.cs" />
+    <Compile Include="Query\Expressions\Val.cs" />
+    <Compile Include="Query\Expressions\XOrExp.cs" />
+    <Compile Include="Query\IfStatement.cs" />
+    <Compile Include="Query\IQuery.cs" />
+    <Compile Include="Query\PlaceHolders.cs" />
+    <Compile Include="Query\Predicates.cs" />
+    <Compile Include="Query\Query.cs" />
+    <Compile Include="Query\QueryOfColumInfo.cs" />
+    <Compile Include="RecordReaders\CommitAtEndRecordReader.cs" />
+    <Compile Include="RecordReaders\IRecord.cs" />
+    <Compile Include="RecordReaders\IRecordReader.cs" />
+    <Compile Include="RecordReaders\IRecordReaderImp.cs" />
+    <Compile Include="RecordReaders\ReadOnlyRecordReader.cs" />
+    <Compile Include="RecordReaders\ReadWriteRecordReader.cs" />
+    <Compile Include="RecordReaders\RecordReader.cs" />
+    <Compile Include="RecordReaders\RecordReaderImp.cs" />
+    <Compile Include="RecordReaders\RegistColumnTypeReader.cs" />
+    <Compile Include="Results\CachedResults.cs" />
+    <Compile Include="Results\CachedResultsProxy.cs" />
+    <Compile Include="Results\DataAndInfoTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Results\IResults.cs" />
+    <Compile Include="Results\Results.cs" />
+    <Compile Include="SqlBuilder\ResultInfoAST\Enums\KeyType.cs" />
+    <Compile Include="SqlBuilder\ResultInfoAST\Enums\ResultInfoType.cs" />
+    <Compile Include="SqlBuilder\ResultInfoAST\ResultInfoAST.cs" />
+    <Compile Include="SqlBuilder\ResultInfoAST\ResultInfo\AbstractQueryResultInfo.cs" />
+    <Compile Include="SqlBuilder\ResultInfoAST\ResultInfo\AbstractSingleQueryResultInfo.cs" />
+    <Compile Include="SqlBuilder\ResultInfoAST\ResultInfo\CompoundQueryResultInfo.cs" />
+    <Compile Include="SqlBuilder\ResultInfoAST\ResultInfo\CountQueryResultInfo.cs" />
+    <Compile Include="SqlBuilder\ResultInfoAST\ResultInfo\IResultInfo.cs" />
+    <Compile Include="SqlBuilder\ResultInfoAST\ResultInfo\QueryResultInfo.cs" />
+    <Compile Include="SqlBuilder\ResultInfoAST\ResultInfo\ResultInfoList.cs" />
+    <Compile Include="SqlBuilder\ResultInfoAST\ResultInfo\ResultInfoLists.cs" />
+    <Compile Include="SqlBuilder\ResultInfoAST\ResultInfo\TableResultInfo.cs" />
+    <Compile Include="SqlBuilder\ResultInfoAST\Visitors\InsertResultInfoVisitor.cs" />
+    <Compile Include="SqlBuilder\ResultInfoAST\Visitors\IResultInfoVisitor.cs" />
+    <Compile Include="SqlBuilder\ResultInfoAST\Visitors\ResultInfoVisitor.cs" />
+    <Compile Include="SqlBuilder\SqlBuilder.cs" />
+    <Compile Include="SqlBuilder\SqlBuilders.cs" />
+    <Compile Include="SqlBuilder\SqlBuilder_Util.cs" />
+    <Compile Include="SqlBuilder\SqlExpr.cs" />
+    <Compile Include="SqlBuilder\SqlPredicate.cs" />
+    <Compile Include="SqlBuilder\SqlTable.cs" />
+    <Compile Include="SqlBuilder\Visitors\AddOrderByVisitor.cs" />
+    <Compile Include="SqlBuilder\Visitors\AddWherePredicateVisitor.cs" />
+    <Compile Include="SqlBuilder\Visitors\ClearOrderByVisitor.cs" />
+    <Compile Include="SqlBuilder\Visitors\ClearWherePredicateVisitor.cs" />
+    <Compile Include="SqlBuilder\Visitors\ConvertToSelectConstant.cs" />
+    <Compile Include="SqlBuilder\Visitors\GetCNFVisitor.cs" />
+    <Compile Include="SqlBuilder\Visitors\GetIfConditionsVisitor.cs" />
+    <Compile Include="SqlBuilder\Visitors\GetOrderByVisitor.cs" />
+    <Compile Include="SqlBuilder\Visitors\GetPlaceHoldersVisitor.cs" />
+    <Compile Include="SqlBuilder\Visitors\GetResultInfoListVisitor.cs" />
+    <Compile Include="SqlBuilder\Visitors\GetSourceTablesVisitor.cs" />
+    <Compile Include="SqlBuilder\Visitors\GetTablesVisitor.cs" />
+    <Compile Include="SqlBuilder\Visitors\GetWherePredicateVisitor.cs" />
+    <Compile Include="SqlBuilder\Visitors\NormalizeOrderByVisitor.cs" />
+    <Compile Include="SqlBuilder\Visitors\RenameTableAliasVisitor.cs" />
+    <Compile Include="SqlBuilder\Visitors\ReplaceAllPlaceholdersByNull.cs" />
+    <Compile Include="SqlBuilder\Visitors\ReplaceAllPlaceholdersToNull.cs" />
+    <Compile Include="SqlBuilder\Visitors\SetMaxRowsVisitor.cs" />
+    <Compile Include="SqlBuilder\Visitors\_ConvertToCountStmtVisitor.cs" />
+    <Compile Include="SqlBuilder\Visitors\_ConvertToSelectAsterisk.cs" />
+    <Compile Include="SqlBuilder\Visitors\_SetPlaceHoldersWrapper.cs" />
+    <Compile Include="SqlBuilder\Visitors\_WrapBySelectAsteriskVisitor.cs" />
+    <Compile Include="SqlPod\ColumnInfoSqlPod.cs" />
+    <Compile Include="SqlPod\SqlId.cs" />
+    <Compile Include="SqlPod\SqlPod.cs" />
+    <Compile Include="SqlPod\SqlPodDefinedByXml.cs" />
+    <Compile Include="SqlPod\SqlPodFactory.cs" />
+    <Compile Include="SqlPod\XmlSimpleReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XmlSchema\sqlPod.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="XmlSchema\sqlPod.xsx">
+      <DependentUpon>sqlPod.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
