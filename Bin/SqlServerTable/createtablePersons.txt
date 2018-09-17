@@ -1,0 +1,33 @@
+create table Persons(
+  id        int not null primary key 
+ ,name      nvarchar(16)
+ ,birthDay  date
+ ,height    float
+ ,weight    int
+ ,isDaimyou bit
+ ,successor int
+ ,remarks   nvarchar(64)
+);
+
+create table Schedules(
+  id        int
+ ,date      date
+ ,subject   nvarchar(64)
+ ,primary key(id, date)
+);
+
+create table LockData(
+  lockId      int not null primary key
+ ,apTranId    int not null
+ ,recordName  nvarchar(32) not null
+ ,tableOwner  nvarchar(32)
+ ,tableName   nvarchar(32) not null
+ ,predicate   nvarchar(128)
+ ,whenUpdated timestamp
+);
+
+create table NoPKeyTable(
+  date   date
+ ,number int
+);
+

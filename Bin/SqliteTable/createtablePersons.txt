@@ -1,0 +1,18 @@
+create table Persons(
+  id        integer primary key not null
+ ,name      text
+ ,birthDay  text
+ ,height    real
+ ,weight    numeric
+ ,isDaimyou bool
+ ,successor integer
+ ,remarks   none
+);
+
+create table Schedules(
+  id        integer
+ ,date      text
+ ,subject   text
+ ,primary key(id, date)
+);
+
