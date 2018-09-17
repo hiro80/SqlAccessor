@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- sqlPod(ルート)要素 -->
+<xsd:element name="sqlPod" type="sqlPodType" />
+
+<!-- sqlPod要素の定義 -->
+<xsd:complexType name="sqlPodType">
+  <xsd:sequence>
+
+    <!-- find要素の定義 -->
+    <xsd:element name="find" minOccurs="1" maxOccurs="1">
+      <xsd:complexType>
+      <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="autoWhere" type="xsd:boolean" />
+      </xsd:extension>
+      </xsd:simpleContent>
+      </xsd:complexType>
+    </xsd:element>
+
+    <!-- 任意要素の定義 -->
+    <xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+
+  </xsd:sequence>
+</xsd:complexType>
+
+</xsd:schema>
