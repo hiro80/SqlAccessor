@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ACD74A50-99EE-4265-A7AF-A1AC7D61E9AA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tester</RootNamespace>
+    <AssemblyName>Tester</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr4.Runtime.Standard, Version=4.7.1.0, Culture=neutral, PublicKeyToken=e78b2c5abd1fcb3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\miniSqlParser\MiniSqlParser\bin\Debug\Antlr4.Runtime.Standard.dll</HintPath>
+    </Reference>
+    <Reference Include="Foundation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin\Foundation.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniSqlParser, Version=1.0.1.0, Culture=neutral, PublicKeyToken=7b2b58c769f4394e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\miniSqlParser\MiniSqlParser\bin\Debug\MiniSqlParser.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\NUnit 2.6.4\bin\framework\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SqlAccessor, Version=0.0.53.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\SqlAccessor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SqlBuilder\AddWherePredicateTester.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Foundation\ClassOfTester.cs" />
+    <Compile Include="Foundation\DictionaryTester.cs" />
+    <Compile Include="Foundation\InstanceOfTester.cs" />
+    <Compile Include="Foundation\StringExtensionTester.cs" />
+    <Compile Include="SqlBuilder\GetCNFTester.cs" />
+    <Compile Include="SqlBuilder\NormalizeOrderByTester.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlBuilder\RenameTableAliasTester.cs" />
+    <Compile Include="SqlBuilder\ReplaceAllPlaceholdersToNullTester.cs" />
+    <Compile Include="SqlAccessor\Cache.cs" />
+    <Compile Include="SqlAccessor\CRUD.cs" />
+    <Compile Include="SqlAccessor\Lock.cs" />
+    <Compile Include="SqlAccessor\MultiThreads.cs" />
+    <Compile Include="SqlAccessor\QueryTester.cs" />
+    <Compile Include="SqlAccessor\Records\Bank.cs" />
+    <Compile Include="SqlAccessor\Records\LuckyNo.cs" />
+    <Compile Include="SqlAccessor\Records\Person.cs" />
+    <Compile Include="SqlAccessor\Records\PersonAutoWhereFalse.cs" />
+    <Compile Include="SqlAccessor\Records\PersonDefaultPH.cs" />
+    <Compile Include="SqlAccessor\Records\PersonGroupBy.cs" />
+    <Compile Include="SqlAccessor\Records\PersonIf.cs" />
+    <Compile Include="SqlAccessor\Records\PersonNoPHcomment.cs" />
+    <Compile Include="SqlAccessor\Records\PersonPair.cs" />
+    <Compile Include="SqlAccessor\Records\PersonTableWildcard.cs" />
+    <Compile Include="SqlAccessor\Records\PersonUnion.cs" />
+    <Compile Include="SqlAccessor\Records\PersonUnionAll.cs" />
+    <Compile Include="SqlAccessor\Records\PersonWildcard.cs" />
+    <Compile Include="SqlAccessor\Records\Schedule.cs" />
+    <Compile Include="SqlAccessor\Records\Schedule2Tables.cs" />
+    <Compile Include="SqlAccessor\Records\ScheduleScheduleSelectInSave.cs" />
+    <Compile Include="SqlAccessor\Records\ScheduleScheduleSelectInSave2 .cs" />
+    <Compile Include="SqlAccessor\Records\ScheduleScheduleSelectInSave3.cs" />
+    <Compile Include="SqlAccessor\Serialize.cs" />
+    <Compile Include="SqlAccessor\Suspend.cs" />
+    <Compile Include="SqlAccessor\Transaction.cs" />
+    <Compile Include="SqlBuilder\SqlBuildersTester.cs" />
+    <Compile Include="SqlBuilder\SqlBuilderTester.cs" />
+    <Compile Include="SqlBuilder\SqlExprTester.cs" />
+    <Compile Include="Tester.cs" />
+    <Compile Include="SqlBuilder\ResultInfoASTTester.cs" />
+    <Compile Include="SqlBuilder\ConvertToSelectConstantTester.cs" />
+    <Compile Include="SqlBuilder\GetIfConditionsVisitorTester.cs" />
+    <Compile Include="SqlBuilder\SqlPredicateTester.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
