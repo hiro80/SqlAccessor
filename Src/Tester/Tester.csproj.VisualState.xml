@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="true">
+  <TopNode>[0-1000]M:\Programs\GenericSQL\Tester\Tester.csproj</TopNode>
+  <SelectedNode>[0-1000]M:\Programs\GenericSQL\Tester\Tester.csproj</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1000]M:\Programs\GenericSQL\Tester\Tester.csproj" Expanded="true" />
+    <Node UniqueName="[0-1055]M:\Programs\GenericSQL\Tester\bin\Debug\Tester.exe" Expanded="true" />
+    <Node UniqueName="[0-1056]Tester" Expanded="true" />
+    <Node UniqueName="[0-1032]Tester.GetResultInfoListTester" Expanded="true" />
+    <Node UniqueName="[0-1001]Tester.StmtTester" Expanded="true" />
+  </Nodes>
+</VisualState>
