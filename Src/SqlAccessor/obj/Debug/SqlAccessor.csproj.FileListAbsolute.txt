@@ -1,0 +1,14 @@
+M:\Programs\DbAccessor\Src\SqlAccessor\obj\Debug\SqlAccessor.Properties.Resources.resources
+M:\Programs\DbAccessor\Src\SqlAccessor\obj\Debug\SqlAccessor.csproj.GenerateResource.Cache
+M:\Programs\DbAccessor\Bin\SqlAccessor.dll
+M:\Programs\DbAccessor\Bin\SqlAccessor.pdb
+M:\Programs\DbAccessor\Src\SqlAccessor\obj\Debug\SqlAccessor.dll
+M:\Programs\DbAccessor\Src\SqlAccessor\obj\Debug\SqlAccessor.pdb
+M:\Programs\DbAccessor\Src\SqlAccessor\obj\Debug\SqlAccessor.csprojResolveAssemblyReference.cache
+M:\Programs\SqlAccessor\Src\SqlAccessor\obj\Debug\SqlAccessor.csprojResolveAssemblyReference.cache
+M:\Programs\SqlAccessor\Src\SqlAccessor\obj\Debug\SqlAccessor.Properties.Resources.resources
+M:\Programs\SqlAccessor\Src\SqlAccessor\obj\Debug\SqlAccessor.csproj.GenerateResource.Cache
+M:\Programs\SqlAccessor\Src\SqlAccessor\obj\Debug\SqlAccessor.dll
+M:\Programs\SqlAccessor\Src\SqlAccessor\obj\Debug\SqlAccessor.pdb
+M:\Programs\SqlAccessor\Bin\SqlAccessor.dll
+M:\Programs\SqlAccessor\Bin\SqlAccessor.pdb
