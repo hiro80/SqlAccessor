@@ -13,15 +13,15 @@ DBとのデータのやり取りの単位となるクラスを作成します。
 
 ### 2. SqlPodの作成
 
-DBに格納されているデータをレコードに格納するために、そのデータをDBからどのように取得するかを定義する必要があります。この定義SqlPodと呼ぶXMLファイルに1つのSELECT文を記述して定義します。SELECT句のAS別名をプロパティ名と同じ名称にすることで、そのSELECT句の値をプロパティに格納するように定義します。
+DBに格納されているデータをレコードに格納するために、そのデータをDBからどのように取得するかを定義する必要があります。この定義はSqlPodと呼ぶXMLファイルに1つのSELECT文を記述して定義します。SELECT句のAS別名をプロパティ名と同じ名称にすることで、そのSELECT句の値をプロパティに格納するように定義します。
 
     <?xml version="1.0" encoding="UTF-8"?>
     <sqlPod>
       <Find><![CDATA[
       SELECT
-        PersonId AS Id
+        PersonId                     AS Id
        ,FirstName || ' ' || LastName AS Name
-       ,BirthDay AS BirthDay
+       ,BirthDay                     AS BirthDay
       FROM
         Persons
       ]]></Find>
@@ -61,9 +61,9 @@ Queryオブジェクトとは、抽出条件を保持するためのオブジェ
     var db = new Db([DBMS種別], [接続文字列]);
 
     // 抽出条件の作成
-    var criteria = new Query&lt;Person&gt;();
-    criteria.And(val.of("Name").Like("足利%") &amp;&amp;
-                 val.of("BirthDay") &lt; Datetime.Now
+    var criteria = new Query<Person>;
+    criteria.And(val.of("Name").Like("足利%") &&
+                 val.of("BirthDay") < Datetime.Now
                 );
 
     // DBからPersonレコードを抽出する
@@ -72,9 +72,9 @@ Queryオブジェクトとは、抽出条件を保持するためのオブジェ
     // 抽出したPersonレコードを表示する
     foreach(var person In reader) {
       WriteLine("抽出結果 >> " + person.Id.ToString());
-      WriteLine("            " + person.Name);
-      WriteLine("            " + person.BirthDay.ToString());
-      WriteLine("            " + person.Age.ToString());
+      WriteLine("          " + person.Name);
+      WriteLine("          " + person.BirthDay.ToString());
+      WriteLine("          " + person.Age.ToString());
     }
 
     db.Dispose();
