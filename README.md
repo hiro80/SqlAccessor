@@ -47,9 +47,8 @@ DBからレコードを抽出するための抽出条件の指定方法には、
     // 抽出したPersonレコードを表示する
     foreach(var person In reader) {
       WriteLine("抽出結果 >> " + person.Id.ToString());
-      WriteLine("            " + person.Name);
-      WriteLine("            " + person.BirthDay.ToString());
-      WriteLine("            " + person.Age.ToString());
+      WriteLine("          " + person.Name);
+      WriteLine("          " + person.BirthDay.ToString());
     }
 
     db.Dispose();
@@ -74,7 +73,6 @@ Queryオブジェクトとは、抽出条件を保持するためのオブジェ
       WriteLine("抽出結果 >> " + person.Id.ToString());
       WriteLine("          " + person.Name);
       WriteLine("          " + person.BirthDay.ToString());
-      WriteLine("          " + person.Age.ToString());
     }
 
     db.Dispose();
