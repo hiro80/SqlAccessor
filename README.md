@@ -5,7 +5,7 @@
 
 DBとのデータのやり取りの単位となるクラスを作成します。このクラスをレコードと呼んでいます。
 
-    public class Person : IRecord
+    public class Person : IRecord {
       public int      Id       { get; set; }
       public string   Name     { get; set; }
       public DateTime BirthDay { get; set; }
