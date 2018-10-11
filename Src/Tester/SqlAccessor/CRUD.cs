@@ -11,13 +11,13 @@ namespace SqlAccessorTester
   {
     private readonly string N = "";
 
-    private SqlBuilder.DbmsType _dbms = SqlBuilder.DbmsType.Sqlite;
-    private string _connectStr = "Data Source=SqliteTable\\Persons.sqlite3";
-    private string _sqlPodsDir = "SqlPodsForSqlite";
+    //private SqlBuilder.DbmsType _dbms = SqlBuilder.DbmsType.Sqlite;
+    //private string _connectStr = "Data Source=SqliteTable\\Persons.sqlite3";
+    //private string _sqlPodsDir = "SqlPodsForSqlite";
 
-    //private SqlBuilder.DbmsType _dbms = SqlBuilder.DbmsType.MsSql;
-    //private string _connectStr = "Data Source=(localdb)\\v11.0";
-    //private string _sqlPodsDir = "SqlPods";
+    private SqlBuilder.DbmsType _dbms = SqlBuilder.DbmsType.MsSql;
+    private string _connectStr = "Data Source=(localdb)\\v11.0";
+    private string _sqlPodsDir = "SqlPods";
 
     private DbParameters _dbParam;
     private Db _db;
