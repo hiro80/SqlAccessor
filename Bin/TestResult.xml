@@ -1,60 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="M:\Programs\SqlAccessor\Bin\Tester.exe" total="32" errors="7" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2018-09-17" time="11:24:23">
-  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.8935" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.4\bin" machine-name="MACBOOKAIR" user="hiropy" user-domain="MACBOOKAIR" />
+<test-results name="M:\Programs\SqlAccessor\Bin\Tester.exe" total="36" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2018-10-11" time="10:19:16">
+  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.8936" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.4\bin" machine-name="MACBOOKAIR" user="hiropy" user-domain="MACBOOKAIR" />
   <culture-info current-culture="ja-JP" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="M:\Programs\SqlAccessor\Bin\Tester.exe" executed="True" result="Failure" success="False" time="219.058" asserts="0">
+  <test-suite type="Assembly" name="M:\Programs\SqlAccessor\Bin\Tester.exe" executed="True" result="Failure" success="False" time="35.918" asserts="0">
     <results>
-      <test-suite type="Namespace" name="SqlAccessorTester" executed="True" result="Failure" success="False" time="219.058" asserts="0">
+      <test-suite type="Namespace" name="SqlAccessorTester" executed="True" result="Failure" success="False" time="35.902" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="CRUD" executed="True" result="Failure" success="False" time="219.057" asserts="0">
+          <test-suite type="TestFixture" name="Cache" executed="True" result="Success" success="True" time="8.231" asserts="0">
             <results>
-              <test-case name="SqlAccessorTester.CRUD.Argument_IsNot_Modified1" executed="True" result="Success" success="True" time="0.330" asserts="12" />
-              <test-case name="SqlAccessorTester.CRUD.Argument_IsNot_Modified2" executed="True" result="Success" success="True" time="0.271" asserts="7" />
-              <test-case name="SqlAccessorTester.CRUD.AutoWhereFalse" executed="True" result="Success" success="True" time="0.270" asserts="12" />
-              <test-case name="SqlAccessorTester.CRUD.CallWithPlaceholders" executed="True" result="Success" success="True" time="0.225" asserts="5" />
-              <test-case name="SqlAccessorTester.CRUD.CallWithRecordAndQuery" executed="True" result="Success" success="True" time="0.250" asserts="5" />
-              <test-case name="SqlAccessorTester.CRUD.ChangeBirthDay" executed="True" result="Success" success="True" time="0.255" asserts="5" />
-              <test-case name="SqlAccessorTester.CRUD.CommitAtFinalizing" executed="True" result="Error" success="False" time="60.377" asserts="3">
-                <failure>
-                  <message><![CDATA[System.Data.SQLite.SQLiteException : database is locked
-database is locked
-TearDown : System.Data.SQLite.SQLiteException : database is locked
-database is locked]]></message>
-                  <stack-trace><![CDATA[at SqlAccessor.Tran.GoToError1AndThrow(Exception innerException, Boolean rollback) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 475
-at SqlAccessor.Tran.Count[TRecord](Query`1 query, Dictionary`2 placeHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 869
-at SqlAccessor.Tran.Count[TRecord](TRecord criteriaRec, Dictionary`2 placeHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 890
-at SqlAccessor.Db.Count[TRecord](TRecord criteriaRec) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Db.cs:line 526
-at SqlAccessorTester.CRUD.CommitAtFinalizing() in m:\Programs\SqlAccessor\Src\Tester\SqlAccessor\CRUD.cs:line 741
---TearDown
-at SqlAccessor.Tran.GoToError1AndThrow(Exception innerException, Boolean rollback) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 475
-at SqlAccessor.Tran.CallImp[TRecord](String sqlEntryName, Boolean useRecordForCriteria, TRecord valueRecord, Query`1 query, Dictionary`2 placeHoldersDic) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 958
-at SqlAccessor.Tran.Call[TRecord](String sqlEntryName, TRecord valueRecord, Dictionary`2 placeHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 1148
-at SqlAccessor.Tran.Delete[TRecord](TRecord criteriaRec, Dictionary`2 placeHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 1167
-at SqlAccessor.Db.Delete[TRecord](TRecord criteriaRec, Dictionary`2 aPlaceHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Db.cs:line 573
-at SqlAccessorTester.CRUD.finalTest() in m:\Programs\SqlAccessor\Src\Tester\SqlAccessor\CRUD.cs:line 69
-]]></stack-trace>
-                </failure>
-              </test-case>
-              <test-case name="SqlAccessorTester.CRUD.DefaultPlaceHolders" executed="True" result="Error" success="False" time="30.132" asserts="0">
-                <failure>
-                  <message><![CDATA[SetUp : System.Data.SQLite.SQLiteException : database is locked
-database is locked]]></message>
-                  <stack-trace><![CDATA[at SqlAccessor.Tran.GoToError1AndThrow(Exception innerException, Boolean rollback) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 475
-at SqlAccessor.Tran.CallImp[TRecord](String sqlEntryName, Boolean useRecordForCriteria, TRecord valueRecord, Query`1 query, Dictionary`2 placeHoldersDic) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 958
-at SqlAccessor.Tran.Call[TRecord](String sqlEntryName, TRecord valueRecord, Dictionary`2 placeHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 1148
-at SqlAccessor.Tran.Save[TRecord](TRecord saveRecord, Dictionary`2 placeHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 1161
-at SqlAccessor.Db.Save[TRecord](TRecord saveRec, Dictionary`2 aPlaceHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Db.cs:line 557
-at SqlAccessorTester.CRUD.SaveTestRecords() in m:\Programs\SqlAccessor\Src\Tester\SqlAccessor\CRUD.cs:line 61
-at SqlAccessorTester.CRUD.initTest() in m:\Programs\SqlAccessor\Src\Tester\SqlAccessor\CRUD.cs:line 48
-]]></stack-trace>
-                </failure>
-              </test-case>
-              <test-case name="SqlAccessorTester.CRUD.DeleteByQuery" executed="True" result="Success" success="True" time="0.211" asserts="5" />
-              <test-case name="SqlAccessorTester.CRUD.DeleteWithSelfOuterJoin" executed="True" result="Success" success="True" time="0.295" asserts="7" />
-              <test-case name="SqlAccessorTester.CRUD.DeleteWithUnion" executed="True" result="Success" success="True" time="0.256" asserts="5" />
-              <test-case name="SqlAccessorTester.CRUD.DeleteWithUnionAll" executed="True" result="Success" success="True" time="0.251" asserts="5" />
-              <test-case name="SqlAccessorTester.CRUD.FindBankWithOuterJoin" executed="True" result="Error" success="False" time="0.215" asserts="3">
+              <test-case name="SqlAccessorTester.Cache.CachMode" executed="True" result="Success" success="True" time="3.720" asserts="5" />
+              <test-case name="SqlAccessorTester.Cache.UseCache" executed="True" result="Success" success="True" time="4.482" asserts="0" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="CRUD" executed="True" result="Failure" success="False" time="23.375" asserts="0">
+            <results>
+              <test-case name="SqlAccessorTester.CRUD.Argument_IsNot_Modified1" executed="True" result="Success" success="True" time="1.063" asserts="12" />
+              <test-case name="SqlAccessorTester.CRUD.Argument_IsNot_Modified2" executed="True" result="Success" success="True" time="0.817" asserts="7" />
+              <test-case name="SqlAccessorTester.CRUD.AutoWhereFalse" executed="True" result="Success" success="True" time="0.642" asserts="12" />
+              <test-case name="SqlAccessorTester.CRUD.CallWithPlaceholders" executed="True" result="Success" success="True" time="0.538" asserts="5" />
+              <test-case name="SqlAccessorTester.CRUD.CallWithRecordAndQuery" executed="True" result="Success" success="True" time="0.429" asserts="5" />
+              <test-case name="SqlAccessorTester.CRUD.ChangeBirthDay" executed="True" result="Success" success="True" time="0.442" asserts="5" />
+              <test-case name="SqlAccessorTester.CRUD.DefaultPlaceHolders" executed="True" result="Success" success="True" time="0.799" asserts="7" />
+              <test-case name="SqlAccessorTester.CRUD.DeleteByQuery" executed="True" result="Success" success="True" time="0.605" asserts="5" />
+              <test-case name="SqlAccessorTester.CRUD.DeleteWithSelfOuterJoin" executed="True" result="Success" success="True" time="0.548" asserts="7" />
+              <test-case name="SqlAccessorTester.CRUD.DeleteWithUnion" executed="True" result="Success" success="True" time="0.640" asserts="5" />
+              <test-case name="SqlAccessorTester.CRUD.DeleteWithUnionAll" executed="True" result="Success" success="True" time="0.520" asserts="5" />
+              <test-case name="SqlAccessorTester.CRUD.FindBankWithOuterJoin" executed="True" result="Error" success="False" time="0.429" asserts="3">
                 <failure>
                   <message><![CDATA[MiniSqlParser.SqlSyntaxErrorsException : Exception of type 'MiniSqlParser.SqlSyntaxErrorsException' was thrown.]]></message>
                   <stack-trace><![CDATA[at SqlAccessor.Tran.GoToError1AndThrow(Exception innerException, Boolean rollback) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 475
@@ -66,89 +38,32 @@ at SqlAccessorTester.CRUD.FindBankWithOuterJoin() in m:\Programs\SqlAccessor\Src
 ]]></stack-trace>
                 </failure>
               </test-case>
-              <test-case name="SqlAccessorTester.CRUD.FindWithGroupBy" executed="True" result="Success" success="True" time="0.206" asserts="7" />
-              <test-case name="SqlAccessorTester.CRUD.FindWithLock" executed="True" result="Success" success="True" time="0.206" asserts="5" />
-              <test-case name="SqlAccessorTester.CRUD.FindWithOuterJoin" executed="True" result="Success" success="True" time="0.981" asserts="261" />
-              <test-case name="SqlAccessorTester.CRUD.FindWithQuery" executed="True" result="Failure" success="False" time="0.253" asserts="11">
-                <failure>
-                  <message><![CDATA[  String lengths are both 345. Strings differ at index 280.
-  Expected: "...AND NOT (((Name='権現様' OR Name=\r\n'大御所様') AND NOT (Name='権現様..."
-  But was:  "...AND NOT (((Name='権現様' OR Name='大御所様'\r\n) AND NOT (Name='権現様..."
-  --------------------------------------------^
-]]></message>
-                  <stack-trace><![CDATA[at SqlAccessorTester.CRUD.FindWithQuery() in m:\Programs\SqlAccessor\Src\Tester\SqlAccessor\CRUD.cs:line 194
-]]></stack-trace>
-                </failure>
-              </test-case>
-              <test-case name="SqlAccessorTester.CRUD.FindWithSelfOuterJoin" executed="True" result="Success" success="True" time="0.231" asserts="7" />
-              <test-case name="SqlAccessorTester.CRUD.FindWithTableWildcard" executed="True" result="Success" success="True" time="0.220" asserts="5" />
-              <test-case name="SqlAccessorTester.CRUD.FindWithUnion" executed="True" result="Success" success="True" time="0.199" asserts="5" />
-              <test-case name="SqlAccessorTester.CRUD.FindWithUnionAll" executed="True" result="Success" success="True" time="0.198" asserts="5" />
-              <test-case name="SqlAccessorTester.CRUD.FindWithWildcard" executed="True" result="Success" success="True" time="0.227" asserts="5" />
-              <test-case name="SqlAccessorTester.CRUD.NoDefaultPlaceHolders" executed="True" result="Success" success="True" time="0.271" asserts="5" />
-              <test-case name="SqlAccessorTester.CRUD.OrderByWithTableColumnName" executed="True" result="Success" success="True" time="0.233" asserts="7" />
-              <test-case name="SqlAccessorTester.CRUD.RollbackAtFinalizing" executed="True" result="Error" success="False" time="60.406" asserts="3">
-                <failure>
-                  <message><![CDATA[System.Data.SQLite.SQLiteException : database is locked
-database is locked
-TearDown : System.Data.SQLite.SQLiteException : database is locked
-database is locked]]></message>
-                  <stack-trace><![CDATA[at SqlAccessor.Tran.GoToError1AndThrow(Exception innerException, Boolean rollback) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 475
-at SqlAccessor.Tran.Count[TRecord](Query`1 query, Dictionary`2 placeHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 869
-at SqlAccessor.Tran.Count[TRecord](TRecord criteriaRec, Dictionary`2 placeHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 890
-at SqlAccessor.Db.Count[TRecord](TRecord criteriaRec) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Db.cs:line 526
-at SqlAccessorTester.CRUD.RollbackAtFinalizing() in m:\Programs\SqlAccessor\Src\Tester\SqlAccessor\CRUD.cs:line 770
---TearDown
-at SqlAccessor.Tran.GoToError1AndThrow(Exception innerException, Boolean rollback) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 475
-at SqlAccessor.Tran.CallImp[TRecord](String sqlEntryName, Boolean useRecordForCriteria, TRecord valueRecord, Query`1 query, Dictionary`2 placeHoldersDic) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 958
-at SqlAccessor.Tran.Call[TRecord](String sqlEntryName, TRecord valueRecord, Dictionary`2 placeHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 1148
-at SqlAccessor.Tran.Delete[TRecord](TRecord criteriaRec, Dictionary`2 placeHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 1167
-at SqlAccessor.Db.Delete[TRecord](TRecord criteriaRec, Dictionary`2 aPlaceHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Db.cs:line 573
-at SqlAccessorTester.CRUD.finalTest() in m:\Programs\SqlAccessor\Src\Tester\SqlAccessor\CRUD.cs:line 69
-]]></stack-trace>
-                </failure>
-              </test-case>
-              <test-case name="SqlAccessorTester.CRUD.SaveAndFind" executed="True" result="Error" success="False" time="30.193" asserts="0">
-                <failure>
-                  <message><![CDATA[SetUp : System.Data.SQLite.SQLiteException : database is locked
-database is locked]]></message>
-                  <stack-trace><![CDATA[at SqlAccessor.Tran.GoToError1AndThrow(Exception innerException, Boolean rollback) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 475
-at SqlAccessor.Tran.CallImp[TRecord](String sqlEntryName, Boolean useRecordForCriteria, TRecord valueRecord, Query`1 query, Dictionary`2 placeHoldersDic) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 958
-at SqlAccessor.Tran.Call[TRecord](String sqlEntryName, TRecord valueRecord, Dictionary`2 placeHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 1148
-at SqlAccessor.Tran.Save[TRecord](TRecord saveRecord, Dictionary`2 placeHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 1161
-at SqlAccessor.Db.Save[TRecord](TRecord saveRec, Dictionary`2 aPlaceHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Db.cs:line 557
-at SqlAccessorTester.CRUD.SaveTestRecords() in m:\Programs\SqlAccessor\Src\Tester\SqlAccessor\CRUD.cs:line 61
-at SqlAccessorTester.CRUD.initTest() in m:\Programs\SqlAccessor\Src\Tester\SqlAccessor\CRUD.cs:line 48
-]]></stack-trace>
-                </failure>
-              </test-case>
-              <test-case name="SqlAccessorTester.CRUD.SavePerson" executed="True" result="Success" success="True" time="0.266" asserts="5" />
-              <test-case name="SqlAccessorTester.CRUD.SavePersonWithPlaceholders" executed="True" result="Success" success="True" time="0.263" asserts="5" />
-              <test-case name="SqlAccessorTester.CRUD.SaveUnSelectTable" executed="True" result="Success" success="True" time="0.199" asserts="5" />
-              <test-case name="SqlAccessorTester.CRUD.SaveWith2Tables" executed="True" result="Error" success="False" time="0.194" asserts="3">
-                <failure>
-                  <message><![CDATA[MiniSqlParser.SqlSyntaxErrorsException : Exception of type 'MiniSqlParser.SqlSyntaxErrorsException' was thrown.]]></message>
-                  <stack-trace><![CDATA[at SqlAccessor.Tran.GoToError1AndThrow(Exception innerException, Boolean rollback) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 475
-at SqlAccessor.Tran.CallImp[TRecord](String sqlEntryName, Boolean useRecordForCriteria, TRecord valueRecord, Query`1 query, Dictionary`2 placeHoldersDic) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 958
-at SqlAccessor.Tran.Call[TRecord](String sqlEntryName, TRecord valueRecord, Dictionary`2 placeHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 1148
-at SqlAccessor.Tran.Save[TRecord](TRecord saveRecord, Dictionary`2 placeHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 1161
-at SqlAccessorTester.CRUD.SaveWith2Tables() in m:\Programs\SqlAccessor\Src\Tester\SqlAccessor\CRUD.cs:line 490
-]]></stack-trace>
-                </failure>
-              </test-case>
-              <test-case name="SqlAccessorTester.CRUD.SaveWithSelfOuterJoin" executed="True" result="Success" success="True" time="0.299" asserts="9" />
-              <test-case name="SqlAccessorTester.CRUD.SelectInSave" executed="True" result="Error" success="False" time="30.319" asserts="3">
-                <failure>
-                  <message><![CDATA[System.Data.SQLite.SQLiteException : database is locked
-database is locked]]></message>
-                  <stack-trace><![CDATA[at SqlAccessor.Tran.GoToError1AndThrow(Exception innerException, Boolean rollback) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 475
-at SqlAccessor.Tran.CallImp[TRecord](String sqlEntryName, Boolean useRecordForCriteria, TRecord valueRecord, Query`1 query, Dictionary`2 placeHoldersDic) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 958
-at SqlAccessor.Tran.Call[TRecord](String sqlEntryName, TRecord valueRecord, Dictionary`2 placeHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 1148
-at SqlAccessor.Tran.Save[TRecord](TRecord saveRecord, Dictionary`2 placeHolders) in m:\Programs\SqlAccessor\Src\SqlAccessor\Db\Tran.cs:line 1161
-at SqlAccessorTester.CRUD.SelectInSave() in m:\Programs\SqlAccessor\Src\Tester\SqlAccessor\CRUD.cs:line 423
-]]></stack-trace>
-                </failure>
-              </test-case>
+              <test-case name="SqlAccessorTester.CRUD.FindWithGroupBy" executed="True" result="Success" success="True" time="0.454" asserts="7" />
+              <test-case name="SqlAccessorTester.CRUD.FindWithLock" executed="True" result="Success" success="True" time="0.599" asserts="5" />
+              <test-case name="SqlAccessorTester.CRUD.FindWithOuterJoin" executed="True" result="Success" success="True" time="2.716" asserts="261" />
+              <test-case name="SqlAccessorTester.CRUD.FindWithQuery" executed="True" result="Success" success="True" time="0.617" asserts="20" />
+              <test-case name="SqlAccessorTester.CRUD.FindWithSelfOuterJoin" executed="True" result="Success" success="True" time="0.435" asserts="7" />
+              <test-case name="SqlAccessorTester.CRUD.FindWithTableWildcard" executed="True" result="Success" success="True" time="0.396" asserts="5" />
+              <test-case name="SqlAccessorTester.CRUD.FindWithUnion" executed="True" result="Success" success="True" time="0.396" asserts="5" />
+              <test-case name="SqlAccessorTester.CRUD.FindWithUnionAll" executed="True" result="Success" success="True" time="0.396" asserts="5" />
+              <test-case name="SqlAccessorTester.CRUD.FindWithWildcard" executed="True" result="Success" success="True" time="0.397" asserts="5" />
+              <test-case name="SqlAccessorTester.CRUD.NoDefaultPlaceHolders" executed="True" result="Success" success="True" time="0.444" asserts="5" />
+              <test-case name="SqlAccessorTester.CRUD.OrderByWithTableColumnName" executed="True" result="Success" success="True" time="0.530" asserts="7" />
+              <test-case name="SqlAccessorTester.CRUD.SaveAndFind" executed="True" result="Success" success="True" time="1.674" asserts="4" />
+              <test-case name="SqlAccessorTester.CRUD.SavePerson" executed="True" result="Success" success="True" time="1.673" asserts="5" />
+              <test-case name="SqlAccessorTester.CRUD.SavePersonWithPlaceholders" executed="True" result="Success" success="True" time="1.647" asserts="5" />
+              <test-case name="SqlAccessorTester.CRUD.SaveUnSelectTable" executed="True" result="Success" success="True" time="1.206" asserts="5" />
+              <test-case name="SqlAccessorTester.CRUD.SaveWith2Tables" executed="True" result="Success" success="True" time="0.436" asserts="7" />
+              <test-case name="SqlAccessorTester.CRUD.SaveWithSelfOuterJoin" executed="True" result="Success" success="True" time="0.531" asserts="9" />
+              <test-case name="SqlAccessorTester.CRUD.SelectInSave" executed="True" result="Success" success="True" time="0.655" asserts="9" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="Lock" executed="True" result="Success" success="True" time="4.259" asserts="0">
+            <results>
+              <test-case name="SqlAccessorTester.Lock.IsFalseExpression" executed="True" result="Success" success="True" time="1.328" asserts="0" />
+              <test-case name="SqlAccessorTester.Lock.Lock1" executed="True" result="Success" success="True" time="1.246" asserts="8" />
+              <test-case name="SqlAccessorTester.Lock.Lock2" executed="True" result="Success" success="True" time="0.972" asserts="3" />
+              <test-case name="SqlAccessorTester.Lock.SelectInSave" executed="True" result="Success" success="True" time="0.666" asserts="0" />
             </results>
           </test-suite>
         </results>
