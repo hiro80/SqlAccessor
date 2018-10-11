@@ -1,0 +1,7 @@
+﻿
+namespace SqlAccessor
+{
+  interface IRecordViewTableMap
+  {
+  }
+}

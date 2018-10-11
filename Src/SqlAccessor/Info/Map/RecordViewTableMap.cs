@@ -11,7 +11,7 @@ namespace SqlAccessor
   /// </summary>
   /// <typeparam name="TRecord"></typeparam>
   /// <remarks></remarks>
-  internal class RecordViewTableMap<TRecord>: IViewInfoGetter
+  internal class RecordViewTableMap<TRecord>: IRecordViewTableMap, IViewInfoGetter
   where TRecord: class, IRecord, new()
   {
     private class Maps: IEnumerable<Map>
@@ -323,9 +323,9 @@ namespace SqlAccessor
       }
     }
 
-    private static RecordViewTableMap<TRecord> _recordViewTableMap;
+    //private static RecordViewTableMap<TRecord> _recordViewTableMap;
     //ロック用オブジェクト
-    private static readonly object _lock = new object();
+    //private static readonly object _lock = new object();
 
     private readonly ICaster _aCaster;
     private readonly TableInfoSet _aTableInfoSet;
@@ -336,38 +336,28 @@ namespace SqlAccessor
     //TRecordにマッピングするView
     private readonly ViewInfo _viewInfo;
 
-    private RecordViewTableMap(TableInfoSet aTableInfoSet
-                              , ICaster aCaster
-                              , SqlPodFactory aSqlPodFactory
-                              , Tran.CacheStrategy ifStmtCacheStrategy, Db aDb) {
-      _aCaster = aCaster;
-      _aTableInfoSet = aTableInfoSet;
-      _ifStmtCacheStrategy = ifStmtCacheStrategy;
-      _sqlPod = aSqlPodFactory.CreateSqlPod<TRecord>();
+    internal RecordViewTableMap(Db aDb) {
+      _aCaster = aDb.GetCaster();
+      _aTableInfoSet = aDb.GetTableInfoSet();
+      // IF文のキャッシュの指定は暫定的にとりあえずUseCache
+      _ifStmtCacheStrategy = Tran.CacheStrategy.UseCache;
+      _sqlPod = aDb.GetSqlPodFactory().CreateSqlPod<TRecord>();
       _viewInfo = new ViewInfo(this.GetRecordInfo().Name, _sqlPod, _aTableInfoSet, aDb);
       this.LoadMapping(_sqlPod);
     }
 
-    public static RecordViewTableMap<TRecord> GetInstance(TableInfoSet aTableInfoSet
-                                                        , ICaster aCaster
-                                                        , SqlPodFactory aSqlPodFactory
-                                                        , Tran.CacheStrategy ifStmtCacheStrategy
-                                                        , Db aDb) {
-      //Double-Checked Lockingパターン
-      if(_recordViewTableMap == null) {
-        lock(_lock) {
-          if(_recordViewTableMap == null) {
-            _recordViewTableMap = new RecordViewTableMap<TRecord>(aTableInfoSet
-                                                                , aCaster
-                                                                , aSqlPodFactory
-                                                                , ifStmtCacheStrategy
-                                                                , aDb);
-          }
-        }
-      }
+    //public static RecordViewTableMap<TRecord> GetInstance(Db aDb) {
+    //  //Double-Checked Lockingパターン
+    //  if(_recordViewTableMap == null) {
+    //    lock(_lock) {
+    //      if(_recordViewTableMap == null) {
+    //        _recordViewTableMap = new RecordViewTableMap<TRecord>(aDb);
+    //      }
+    //    }
+    //  }
 
-      return _recordViewTableMap;
-    }
+    //  return _recordViewTableMap;
+    //}
 
     private void LoadMapping(SqlPod aSqlPod) {
       //'find','count'以外の全てのSQLエントリからSQL文を取得する
@@ -677,7 +667,7 @@ namespace SqlAccessor
     /// <returns></returns>
     /// <remarks>返される配列の要素数は常に2要素である</remarks>
     public TRecord[] SplitForKey2(TRecord aRecord, SqlTable targetTable) {
-      SqlBuilder selectSql = _sqlPod.GetSelectSql(new Query<TRecord>(), _recordViewTableMap);
+      SqlBuilder selectSql = _sqlPod.GetSelectSql(new Query<TRecord>(), this);
       PropertyInfo[] properties = this.GetRecordInfo().Properties;
       TRecord keyRecord = new TRecord();
       TRecord nonKeyRecord = new TRecord();
