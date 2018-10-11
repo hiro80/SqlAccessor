@@ -122,6 +122,7 @@
     <Compile Include="Exceptions\NotExistsTableException.cs" />
     <Compile Include="Exceptions\NotExistsViewColumnException.cs" />
     <Compile Include="Exceptions\WriteToLockedRecordException.cs" />
+    <Compile Include="Info\Map\IRecordViewTableMap.cs" />
     <Compile Include="Info\Map\IViewInfoGetter.cs" />
     <Compile Include="Info\Map\RecordViewTableMap.cs" />
     <Compile Include="Info\Map\RecordViewTableMapFactory.cs" />
