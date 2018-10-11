@@ -227,6 +227,10 @@ namespace SqlAccessor
         innerException = new DbAccessException("DBからの切断に失敗しました", innerException);
       }
 
+      //Error1状態に遷移する
+      // Added in 20181010
+      this.GoToNextState(Error1.GetInstance());
+
       //例外を再送出する
       throw innerException;
     }
