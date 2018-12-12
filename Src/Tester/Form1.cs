@@ -10,7 +10,7 @@ namespace Tester
     public Form1() {
       InitializeComponent();
       this.dbmsType.SelectedIndex = 0;
-      this.selectedVisitor.SelectedIndex = 8;
+      this.selectedVisitor.SelectedIndex = 2;
     }
 
     private Dictionary<string, string> _placeHolders;
