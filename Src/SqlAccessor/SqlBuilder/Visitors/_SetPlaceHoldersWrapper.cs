@@ -55,6 +55,9 @@ namespace MiniSqlParser
     public void VisitOnSeparator(CommaJoinSource commaJoinSource, int offset, int i) {
       _visitor.VisitOnSeparator(commaJoinSource, offset, i);
     }
+    public void VisitOnSeparator(ValuesList valuesList, int offset, int i) {
+      throw new System.NotImplementedException();
+    }
     public void VisitOnSeparator(SubstringFunc expr, int offset, int i) {
       _visitor.VisitOnSeparator(expr, offset, i);
     }
