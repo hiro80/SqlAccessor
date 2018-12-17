@@ -17,7 +17,7 @@ namespace SqlAccessor
       return new OrExp((IExp)_lOperand.Clone(), (IExp)_rOperand.Clone());
     }
     public override string ToString(int orNestLevel = 0) {
-      //被演算子の両方、又はどちらか片方がNothingの場合
+      //被演算子の両方、又はどちらか片方がnullの場合
       if(_lOperand == null && _rOperand == null) {
         return "";
       } else if(_lOperand == null) {

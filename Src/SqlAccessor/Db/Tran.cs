@@ -282,7 +282,7 @@ namespace SqlAccessor
 
       //以下の判定コードでは、State.OutOfDbTransactionの時に
       //APトランザクションが終了したと誤認識される
-      //Return _aDbConn Is Nothing OrElse _aDbConn.IsClosed
+      //Return _aDbConn Is null OrElse _aDbConn.IsClosed
     }
 
     private void Commit() {

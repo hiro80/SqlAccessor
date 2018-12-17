@@ -23,7 +23,7 @@ namespace SqlAccessor
     }
 
     public new bool IsDisposed() {
-      //Return _aDataTable Is Nothing
+      //Return _aDataTable Is null
       return base.IsDisposed;
     }
 
@@ -61,7 +61,7 @@ namespace SqlAccessor
 
     public System.Type GetDataType(int columnPos) {
       this.ThrowIfDisposed();
-      //ResultsではMoveNext()せずにGetDataType()を実行するとNothingを返す?(未確認)
+      //ResultsではMoveNext()せずにGetDataType()を実行するとnullを返す?(未確認)
 
       //Results.GetDataType()と挙動を合わせるため、MoveNext()なきGetDataType()の返り値はNullにしていたが、
       //CachedResultsProxyでラッピングして使用するので、MoveNext()が呼ばれることはない.
@@ -78,7 +78,7 @@ namespace SqlAccessor
 
     public string GetDbColumnTypeName(int columnPos) {
       this.ThrowIfDisposed();
-      //ResultsではMoveNext()せずにGetDataType()を実行するとNothingを返す?(未確認)
+      //ResultsではMoveNext()せずにGetDataType()を実行するとnullを返す?(未確認)
 
       //if(_rowPos < 0) {
       //  return null

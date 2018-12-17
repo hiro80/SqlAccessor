@@ -76,7 +76,7 @@ namespace SqlAccessor
         return new CachedResultsProxy(findCache.Cache);
       }
 
-      //キャッシュが見つからなければNothingを返す
+      //キャッシュが見つからなければnullを返す
       return null;
     }
 

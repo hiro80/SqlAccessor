@@ -68,7 +68,7 @@ namespace SqlAccessor
     /// <param name="propertyNames">ソートキー</param>
     /// <remarks></remarks>
     public void OrderBy(params string[] propertyNames) {
-      //propertyNamesがNothingの場合は何も追加しない
+      //propertyNamesがnullの場合は何も追加しない
       if(propertyNames == null) {
         return;
       }
@@ -86,7 +86,7 @@ namespace SqlAccessor
     /// <param name="propertyNames">ソートキー</param>
     /// <remarks></remarks>
     public void OrderBy(IEnumerable<string> propertyNames) {
-      //propertyNamesがNothingの場合は何も追加しない
+      //propertyNamesがnullの場合は何も追加しない
       if(propertyNames == null) {
         return;
       }
@@ -102,7 +102,7 @@ namespace SqlAccessor
     /// <param name="propertyNames">ソートキー</param>
     /// <remarks></remarks>
     public void OrderByDesc(params string[] propertyNames) {
-      //propertyNamesがNothingの場合は何も追加しない
+      //propertyNamesがnullの場合は何も追加しない
       if(propertyNames == null) {
         return;
       }
@@ -120,7 +120,7 @@ namespace SqlAccessor
     /// <param name="propertyNames">ソートキー</param>
     /// <remarks></remarks>
     public void OrderByDesc(IEnumerable<string> propertyNames) {
-      //propertyNamesがNothingの場合は何も追加しない
+      //propertyNamesがnullの場合は何も追加しない
       if(propertyNames == null) {
         return;
       }

@@ -77,7 +77,7 @@ namespace MiniSqlParser
     private Predicate AddPredicate(Predicate where) {
       //if(_predicate == null || _predicate.GetType() == typeof(NullPredicate)) {
       if(_predicate == null) {
-        // 空文字、又はNothingであれば構文木に何もしない
+        // 空文字、又はnullであれば構文木に何もしない
         return where;
       }
 

@@ -31,7 +31,7 @@ public class PersonDefaultPH: IRecord
       return false;
     }
     PersonDefaultPH person = (PersonDefaultPH)obj;
-    //HasValue=FalseなNull許容型同士を比較するとNothingになるので、Trueになるように一致条件を工夫した
+    //HasValue=FalseなNull許容型同士を比較するとnullになるので、Trueになるように一致条件を工夫した
     if((this.Id == person.Id || 
       (!this.IsDaimyou.HasValue && !person.IsDaimyou.HasValue)) && 
       this.Name == person.Name && 

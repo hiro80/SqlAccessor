@@ -22,7 +22,7 @@ public class PersonUnion: IRecord
       return false;
     }
     PersonUnion person = (PersonUnion)obj;
-    //HasValue=FalseなNull許容型同士を比較するとNothingになるので、Trueになるように一致条件を工夫した
+    //HasValue=FalseなNull許容型同士を比較するとnullになるので、Trueになるように一致条件を工夫した
     if(this.Id == person.Id && this.Name == person.Name && this.BirthDay == person.BirthDay ) {
       return true;
     } else {

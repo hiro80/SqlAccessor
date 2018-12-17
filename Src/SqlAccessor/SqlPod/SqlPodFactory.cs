@@ -105,7 +105,7 @@ namespace SqlAccessor
         //SqlPodの型名からTypeオブジェクトを取得する
         string sqlPodTypeName = this.GetType().Namespace + Type.Delimiter + viewName + "SqlPod";
         Type sqlPodType = sqlPodAsm.GetType(sqlPodTypeName);
-        //Dim aSqlPod As SqlPod = New [sqlPodTypeName] と同等
+        //SqlPod aSqlPod = new [sqlPodTypeName]; と同等
         aSqlPod = (SqlPod)Activator.CreateInstance(sqlPodType);
       } catch(Exception ex) {
         //SqlPodクラスが生成できなかった場合、例外を送出する

@@ -36,7 +36,7 @@ namespace SqlAccessor
     }
 
     public PropertyInfo GetPropertyInfo(string propertyName) {
-      //指定したプロパティが無ければNothingが返る
+      //指定したプロパティが無ければnullが返る
       return _recordType.GetProperty(propertyName);
     }
   }

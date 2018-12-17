@@ -27,7 +27,7 @@ namespace SqlAccessor
             try {
               newTableInfo = new TableInfo(_aDb, tableName);
             } catch(System.ArgumentOutOfRangeException ex) {
-              //引数で指定された名称のテーブルが存在しない場合、Nothingを登録する
+              //引数で指定された名称のテーブルが存在しない場合、nullを登録する
               newTableInfo = null;
             }
             _tableInfoHash.Add(tableName, newTableInfo);

@@ -554,7 +554,7 @@ namespace SqlAccessor
     /// <param name="tableAliasName">更新対象テーブル別名</param>
     /// <param name="propertyName">プロパティ名</param>
     /// <returns></returns>
-    /// <remarks>一対一で対応するテーブル列がない場合はNothingを返す</remarks>
+    /// <remarks>一対一で対応するテーブル列がない場合はnullを返す</remarks>
     public ColumnInfo GetTableColumnInfoByProp(string tableAliasName
                                              , string propertyName) {
       Map aMap = _mapSet.Find1to1Column(tableAliasName, propertyName);
@@ -562,7 +562,7 @@ namespace SqlAccessor
         return this.GetTableColumnInfo(aMap.Table.Name, aMap.ColumnName);
       }
 
-      //一対一で対応するテーブルカラムが無ければNothingを返す
+      //一対一で対応するテーブルカラムが無ければnullを返す
       return null;
     }
 
@@ -572,7 +572,7 @@ namespace SqlAccessor
     /// <param name="preferredTableAliasName">優先する更新対象テーブル別名</param>
     /// <param name="propertyName">プロパティ名</param>
     /// <returns></returns>
-    /// <remarks>一対一で対応するテーブル列がない場合はNothingを返す</remarks>
+    /// <remarks>一対一で対応するテーブル列がない場合はnullを返す</remarks>
     public ColumnInfo GetTableColumnInfoByProp2(string preferredTableAliasName
                                               , string propertyName) {
       Map aMap = _mapSet.Find1to1Column(preferredTableAliasName, propertyName);
@@ -587,7 +587,7 @@ namespace SqlAccessor
         return this.GetTableColumnInfo(aMap.Table.Name, aMap.ColumnName);
       }
 
-      //一対一で対応するテーブルカラムが無ければNothingを返す
+      //一対一で対応するテーブルカラムが無ければnullを返す
       return null;
     }
 
@@ -607,7 +607,7 @@ namespace SqlAccessor
       }
 
       //aRecordオブジェクトのプロパティ値をプレースホルダに格納する
-      //(aRecordがNothingであれば、処理をスキップする)
+      //(aRecordがnullであれば、処理をスキップする)
       if(aRecord == null) {
         return aPlaceHolders;
       }
@@ -998,9 +998,9 @@ namespace SqlAccessor
                               , string tableAliasName
                               , IDbConn aDbConn
                               , int lastAffectedRows) {
-      //'QueryオブジェクトはCastToSqlLiteralType()によって変更されるのでコピーを用いる
-      //Dim query As Query(Of TRecord) = DirectCast(aQuery.Clone(), Query(Of TRecord))
-      //'Queryオブジェクトが保持するリテラル値をDB列型にキャストする
+      //QueryオブジェクトはCastToSqlLiteralType()によって変更されるのでコピーを用いる
+      //var query = (Query<TRecord>)aQuery.Clone();
+      //Queryオブジェクトが保持するリテラル値をDB列型にキャストする
       //query.CastToSqlLiteralType(_aCaster, _aRecordViewMap)
 
       //プロパティプレースホルダ以外の全てのプレースホルダに、

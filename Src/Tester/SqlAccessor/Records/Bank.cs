@@ -32,7 +32,7 @@ public class Bank: IRecord
       return false;
     }
     Bank bank = (Bank)obj;
-    //HasValue=FalseなNull許容型同士を比較するとNothingになるので、Trueになるように一致条件を工夫した
+    //HasValue=FalseなNull許容型同士を比較するとnullになるので、Trueになるように一致条件を工夫した
     if(this.BankId == bank.BankId && this.BranchId == bank.BranchId) {
       return true;
     }else{

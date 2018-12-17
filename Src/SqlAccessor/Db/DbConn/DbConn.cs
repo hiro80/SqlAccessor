@@ -190,7 +190,7 @@ namespace SqlAccessor
             _aResultsCache.ReleaseWriterLock();
           }
         } else {
-          //If _aDbTransaction.Connection IsNot Nothing AndAlso
+          //If _aDbTransaction.Connection IsNot null AndAlso
           //   _aDbTransaction.Connection.State = Data.ConnectionState.Connecting Then
           _aDbTransaction.Rollback();
           _aDbTransaction.Dispose();

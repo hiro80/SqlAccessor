@@ -59,10 +59,10 @@ namespace SqlAccessor
         string typeName = _nameSpace + Type.Delimiter + _className;
         Type aType = asm.GetType(typeName);
         if(constructorParams == null) {
-          //Dim aXXX As XXX = New XXX と同等
+          // var aXXX = new XXX(); と同等
           loadClass = (T)Activator.CreateInstance(aType);
         } else {
-          //Dim aXXX As XXX = New XXX(...) と同等
+          // var aXXX = new XXX(...); と同等
           loadClass = (T)Activator.CreateInstance(aType, constructorParams);
         }
       } catch(Exception ex) {

@@ -22,7 +22,7 @@ public class LuckyNo: IRecord
       return false;
     }
     LuckyNo luckyNo = (LuckyNo)obj;
-    //HasValue=FalseなNull許容型同士を比較するとNothingになるので、Trueになるように一致条件を工夫した
+    //HasValue=FalseなNull許容型同士を比較するとnullになるので、Trueになるように一致条件を工夫した
     if((this.Date ==    luckyNo.Date    || (!this.Date.HasValue    && !luckyNo.Date.HasValue)) &&
        (this.Number == luckyNo.Number || (!this.Number.HasValue && !luckyNo.Number.HasValue))) {
       return true;

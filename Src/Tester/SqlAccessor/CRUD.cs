@@ -112,7 +112,7 @@ namespace SqlAccessorTester
     public void SaveAndFind() {
       // Saveしたレコードをデータ無損失で抽出できるか
 
-      //'テストレコード追加
+      //テストレコード追加
       var person1 = new Person(103,
                                "山本五十六",
                                new DateTime(1884, 4, 4),

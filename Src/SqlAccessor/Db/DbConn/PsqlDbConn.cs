@@ -20,35 +20,34 @@ namespace SqlAccessor
     }
 
     protected override System.Data.Common.DbConnection CreateDbConnection() {
-      //'    Return New PsqlConnection()
+      // return new PsqlConnection();
       throw new NotImplementedException();
     }
 
     protected override DbCommand CreateDbCommand(string sql
                                                 , DbConnection aDbConnection
                                                 , DbTransaction aDbTransaction) {
-      //_debugPrint = Trueの場合にSQL文発行ログを出力する
+      //_debugPrint = trueの場合にSQL文発行ログを出力する
       if(_debugPrint) {
         _logger.Print(sql);
       }
 
       //第2,3引数にはPsqlDbConn.CreateDbConnection()の戻り値、及びその戻り値から生成されるPsqlTransaction型オブジェクトが
       //渡されるので、不正な型のオブジェクトが渡されることはない。
-      //Return New PsqlCommand(sql, DirectCast(aDbConnection, PsqlConnection), DirectCast(aDbTransaction, PsqlTransaction))
+      // return new PsqlCommand(sql, (PsqlConnection)aDbConnection, (PsqlTransaction)aDbTransaction);
 
       //接続TimeOut値をここで設定する。
       //(接続文字列でも指定できるが最新のパッチを適用したPervasiveでないと機能しない)
-      //'    Dim aPsqlCommand As PsqlCommand _
-      //'      = New PsqlCommand(sql, DirectCast(aDbConnection, PsqlConnection), DirectCast(aDbTransaction, PsqlTransaction))
-      //'    aPsqlCommand.CommandTimeout = 1140
+      //var aPsqlCommand = new PsqlCommand(sql, (PsqlConnection)aDbConnection, (PsqlTransaction)aDbTransaction);
+      //aPsqlCommand.CommandTimeout = 1140;
+      //return aPsqlCommand;
 
-      //'    Return aPsqlCommand
       throw new NotImplementedException();
     }
 
     protected override DataAdapter CreateDataAdapter(DbCommand aDbCommand) {
       //引数にはPsqlDbConn.CreateDbCommandの戻り値が渡されるので、不正な型のオブジェクトが渡されることはない。
-      //'    Return New PsqlDataAdapter(DirectCast(aDbCommand, PsqlCommand))
+      // return new PsqlDataAdapter((PsqlCommand)aDbCommand);
       throw new NotImplementedException();
     }
 
@@ -60,10 +59,9 @@ namespace SqlAccessor
     }
 
     protected override bool IsDuplicateKeyException(System.Exception ex) {
-      //'    If TypeOf ex Is PsqlException _
-      //'       AndAlso DirectCast(ex, PsqlException).Number = -4994 Then
-      //'    Return True
-      //'    End If
+      //if(ex.GetType() == PsqlException && ((PsqlException)ex).Number == -4994) {
+      //  return true;
+      //}
 
       return false;
     }

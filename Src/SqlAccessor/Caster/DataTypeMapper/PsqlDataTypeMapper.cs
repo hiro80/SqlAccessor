@@ -16,7 +16,7 @@ namespace SqlAccessor
 
     public SqlLiteralType GetSqlLiteralTypeOf(ViewColumnInfo aViewColumnInfo) {
       if(aViewColumnInfo == null) {
-        throw new ArgumentNullException("aViewColumnInfo", "aViewColumnInfoがNothingです");
+        throw new ArgumentNullException("aViewColumnInfo", "aViewColumnInfoがnullです");
       }
       if(aViewColumnInfo.DbColumnTypeName == null) {
         throw new ApplicationException(

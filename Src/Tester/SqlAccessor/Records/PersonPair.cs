@@ -28,7 +28,7 @@ public class PersonPair: IRecord
       return false;
     }
     PersonPair personPair = (PersonPair)obj;
-    //HasValue=FalseなNull許容型同士を比較するとNothingになるので、Trueになるように一致条件を工夫した
+    //HasValue=FalseなNull許容型同士を比較するとnullになるので、Trueになるように一致条件を工夫した
     if(this.Id == personPair.Id){
       return true;
     } else {

@@ -97,9 +97,9 @@ namespace SqlAccessorTester
 
       for(int i = 0; i<128 ; ++i){
         this.Serialize(aTran1);
-        //'Rollback()がないと、aTran1オブジェクトがGCにDispose()されるため
-        //'INSERT文がコミットされる複数のaTran1オブジェクトがDispose()されると
-        //'DuplicateKey例外が送出される
+        //Rollback()がないと、aTran1オブジェクトがGCにDispose()されるため
+        //INSERT文がコミットされる複数のaTran1オブジェクトがDispose()されると
+        //DuplicateKey例外が送出される
         aTran1.Rollback();
         aTran1 = null;
         aTran1 = this.Deserialize();

@@ -42,7 +42,7 @@ namespace SqlAccessor
     }
 
     public System.Type GetDataType(int columnPos) {
-      //ResultsではMoveNext()せずにGetDataType()を実行するとNothingを返す?(未確認)
+      //ResultsではMoveNext()せずにGetDataType()を実行するとnullを返す?(未確認)
       if(_rowPos < 0) {
         return null;
       }
@@ -50,7 +50,7 @@ namespace SqlAccessor
     }
 
     public string GetDbColumnTypeName(int columnPos) {
-      //ResultsではMoveNext()せずにGetDataType()を実行するとNothingを返す?(未確認)
+      //ResultsではMoveNext()せずにGetDataType()を実行するとnullを返す?(未確認)
       if(_rowPos < 0) {
         return null;
       }

@@ -11,7 +11,7 @@ namespace SqlAccessor
   {
 
     #region "ADO.NETが返すデータ型 → プロパティ型"
-    #region "'ADO.NETが返すデータ型毎のCast前編集"
+    #region "ADO.NETが返すデータ型毎のCast前編集"
     public virtual object BeforeCast_ViewColumnType(StringViewColumnType viewColumnType
                                                   , ViewColumnInfo aViewColumnInfo
                                                   , object viewColumnValue) {
@@ -54,7 +54,7 @@ namespace SqlAccessor
     }
     #endregion
 
-    #region "'ADO.NETが返すデータ型毎のCast後編集"
+    #region "ADO.NETが返すデータ型毎のCast後編集"
     public virtual object AfterCast_ViewColumnType(StringViewColumnType viewColumnType
                                                   , ViewColumnInfo aViewColumnInfo
                                                   , object propertyValue) {
@@ -111,7 +111,7 @@ namespace SqlAccessor
       return propertyValue;
     }
 
-    #region "'ADO.NETが返すデータ型とプロパティ型毎のCast前編集"
+    #region "ADO.NETが返すデータ型とプロパティ型毎のCast前編集"
     public virtual object BeforeCast(StringViewColumnType viewColumnType
                                     , PropertyType propertyType
                                     , ViewColumnInfo aViewColumnInfo
@@ -162,7 +162,7 @@ namespace SqlAccessor
     }
     #endregion
 
-    #region "'ADO.NETが返すデータ型とプロパティ型毎のCast後編集"
+    #region "ADO.NETが返すデータ型とプロパティ型毎のCast後編集"
     public virtual object AfterCast(StringViewColumnType viewColumnType
                                   , PropertyType propertyType
                                   , ViewColumnInfo aViewColumnInfo
@@ -216,7 +216,7 @@ namespace SqlAccessor
     #endregion
 
     #region "プロパティ型 → SQLリテラル型"
-    #region "'SQLリテラル型毎のCast前編集"
+    #region "SQLリテラル型毎のCast前編集"
     public virtual object BeforeCast_SqlLiteralType(StringSqlLiteralType sqlLiteralType
                                                   , ColumnInfo aColumnInfo
                                                   , object propertyValue) {
@@ -249,7 +249,7 @@ namespace SqlAccessor
     }
     #endregion
 
-    #region "'SQLリテラル型毎のCast後編集"
+    #region "SQLリテラル型毎のCast後編集"
     public virtual string AfterCast_SqlLiteralType(StringSqlLiteralType sqlLiteralType
                                                   , ColumnInfo aColumnInfo
                                                   , string sqlLiteralValue) {
@@ -296,7 +296,7 @@ namespace SqlAccessor
       return sqlLiteralValue;
     }
 
-    #region "'SQLリテラル型とプロパティ型毎のCast前編集"
+    #region "SQLリテラル型とプロパティ型毎のCast前編集"
     public virtual object BeforeCast(StringSqlLiteralType sqlLiteralType
                                     , PropertyType propertyType
                                     , ColumnInfo aColumnInfo
@@ -335,7 +335,7 @@ namespace SqlAccessor
     }
     #endregion
 
-    #region "'SQLリテラル型とプロパティ型毎のCast後編集"
+    #region "SQLリテラル型とプロパティ型毎のCast後編集"
     public virtual string AfterCast(StringSqlLiteralType sqlLiteralType
                                   , PropertyType propertyType
                                   , ColumnInfo aColumnInfo

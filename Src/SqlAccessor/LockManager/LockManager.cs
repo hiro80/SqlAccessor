@@ -258,14 +258,14 @@ namespace SqlAccessor
       Equation eq2 = rCnf.Current;
 
       foreach(Equation eq1 in lCnf) {
-        //'eq1と同じ素論理式までrCnfをイテレートする
-        //Dim eq2 As Equation = Nothing
-        //While rCnf.MoveNext
-        //    eq2 = rCnf.Current
-        //    If eq2.Variable >= eq1.Variable Then
-        //        Exit While
-        //    End If
-        //End While
+        //eq1と同じ素論理式までrCnfをイテレートする
+        //Equation eq2 = null;
+        //while(rCnf.MoveNext()) {
+        //  eq2 = rCnf.Current;
+        //  if(eq2.Variable >= eq1.Variable) {
+        //    break;
+        //  }
+        //}
 
         //eq1と同じ素論理式までrCnfをイテレートする
         while(eq2.Variable.CompareTo(eq1.Variable) < 0 && rCnf.MoveNext()) {

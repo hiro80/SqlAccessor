@@ -25,7 +25,7 @@ public class PersonGroupBy: IRecord
       return false;
     }
     PersonGroupBy person = (PersonGroupBy)obj;
-    //HasValue=FalseなNull許容型同士を比較するとNothingになるので、Trueになるように一致条件を工夫した
+    //HasValue=FalseなNull許容型同士を比較するとnullになるので、Trueになるように一致条件を工夫した
     if(this.Count == person.Count && this.BirthDay == person.BirthDay) {
       return true;
     } else {

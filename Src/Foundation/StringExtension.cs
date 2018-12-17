@@ -273,8 +273,6 @@ namespace SqlAccessor
     /// <param name="newStr">置換文字列</param>
     /// <remarks></remarks>
     public string ReplaceByWord(string oldStr, string newStr) {
-      //indexOf()を使用したいので、String型の置換対象文字列を取得する
-      //'    Dim strEx As New StringExtension(str)
       StringBuilder ret = new StringBuilder(_str);
       //置換対象文字列における検索文字列の開始位置
       int idx = 0;
@@ -292,11 +290,6 @@ namespace SqlAccessor
         if(idx < 0) {
           return ret.ToString();
         }
-        //検索文字列が存在する位置が、コメント内の場合は置換しない
-        // ''If strEx.IsInComment(idx, "/*", "*/") Then
-        // ''  preIdx = idx + oldStr.Length
-        // ''  Continue For
-        // ''End If
         preIdx = idx + oldStr.Length;
         postChar = (_str.Substring(preIdx, 1).ToCharArray()[0]);
         //英数字と'_'以外の文字をを単語の区切りと見なす

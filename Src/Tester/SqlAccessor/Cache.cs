@@ -28,7 +28,7 @@ namespace SqlAccessorTester
         _dbParam.LockData = DbParameters.LockDataType.Sqlite;
       }
     }
-
+    
     [SetUp()]
     public void initTest(){
       bool b = System.Runtime.GCSettings.IsServerGC;
@@ -46,7 +46,7 @@ namespace SqlAccessorTester
 
     [Test]
     public void CachMode(){
-      //'テストレコード追加
+      //テストレコード追加
       var person1 = new Person(103,
                                "山本五十六",
                                new DateTime(1884, 4, 4),
@@ -81,7 +81,7 @@ namespace SqlAccessorTester
 
     [Test]
     public void UseCache() {
-      //'テストレコード
+      //テストレコード
       var person = new Person(103,
                               "山本五十六",
                               new DateTime(1884, 4, 4),

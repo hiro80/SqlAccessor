@@ -58,7 +58,7 @@ namespace SqlAccessor
             //生成にGenericパラメータが必要なクラスは除外する
             if(proppertyTypeType.IsGenericType == false &&
                proppertyTypeType.IsSubclassOf(typeof(PropertyType))) {
-              //Dim aXXX As XXX = New XXX(...) と同等
+              // var aXXX = new XXX(); と同等
               PropertyType aPropertyType = (PropertyType)Activator.CreateInstance(proppertyTypeType, new object[] { _castEditor });
               if(_propertyTypeHash.ContainsKey(aPropertyType.GetPropertyType())) {
                 throw new CannotLoadPropertyTypeException(
@@ -76,7 +76,7 @@ namespace SqlAccessor
     }
 
     public bool IsNullPropertyValue(object propertyValue) {
-      //propertyValueがNothing、またはNull許容型にNothingが格納された値の場合、NULLとする
+      //propertyValueがnull、またはNull許容型にnullが格納された値の場合、NULLとする
       if(propertyValue == null) {
         return true;
       }
@@ -100,10 +100,10 @@ namespace SqlAccessor
                                    , ViewColumnInfo aViewColumnInfo
                                    , System.Type propertyTypeObj
                                    , ColumnInfo aColumnInfo = null) {
-      //columnValueがNothingまたはDbNullの場合、NULL表現値を返す
+      //columnValueがnullまたはDbNullの場合、NULL表現値を返す
       if(viewColumnValue == null || viewColumnValue is DBNull) {
         if(this.IsNullableType(propertyTypeObj)) {
-          //変換先プロパティ型がNull許容型ならば、NothingがNull表現値である
+          //変換先プロパティ型がNull許容型ならば、nullがNull表現値である
           return null;
         } else {
           //Null許容型でないならば、データ型固有のNull表現値を返す
@@ -136,9 +136,9 @@ namespace SqlAccessor
       //propertyTypeを生成する
       PropertyType aPropertyType = null;
 
-      //propertyValueがNothingまたはNULL表現値の場合、"NULL", "DEFAULT", SQLリテラル初期値のいずれかを返す
+      //propertyValueがnullまたはNULL表現値の場合、"NULL", "DEFAULT", SQLリテラル初期値のいずれかを返す
       if(propertyValue == null) {
-        //Nothing、またはNull許容型にNothingが格納された値の場合
+        //null、またはNull許容型にnullが格納された値の場合
         return this.NullOrDefaultValue(sqlLiteralType, aColumnInfo);
       } else {
         aPropertyType = this.GetPropertyType(propertyValue.GetType());
@@ -161,15 +161,15 @@ namespace SqlAccessor
     private string NullOrDefaultValue(SqlLiteralType aSqlLiteralType
                                     , ColumnInfo aColumnInfo) {
       if(aColumnInfo == null) {
-        // ''変換先の列のメタ情報がわからない場合、SQLリテラルの初期値を格納する
-        //'Return aSqlLiteralType.DefaultValue
+        ////変換先の列のメタ情報がわからない場合、SQLリテラルの初期値を格納する
+        //return aSqlLiteralType.DefaultValue
         //変換先の列のメタ情報がわからない場合、NULLを格納する
         return "NULL";
       } else if(!aColumnInfo.Nullable.HasValue || !aColumnInfo.Nullable.Value) {
         //変換先の列がNOT NULLの場合
         if(string.IsNullOrEmpty(aColumnInfo.DefaultValue)) {
-          // ''NOT NULLかつDEFAULT値が設定されていない場合、SQLリテラルの初期値を格納する
-          //'Return aSqlLiteralType.DefaultValue
+          ////NOT NULLかつDEFAULT値が設定されていない場合、SQLリテラルの初期値を格納する
+          //return aSqlLiteralType.DefaultValue
           //NOT NULLかつDEFAULT値が設定されていない場合、
           //プロパティ値の設定誤りになるのでNULLを格納しSQLの実行エラーにする
           return "NULL";

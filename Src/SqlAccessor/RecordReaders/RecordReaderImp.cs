@@ -113,8 +113,8 @@ namespace SqlAccessor
 
           //ViewColumnの値をレコードのプロパティに格納する
           //
-          //'第3引数のColumnInfoはどうやって取ってくるか考え中。
-          //'暫定的にNothingにする。
+          //第3引数のColumnInfoはどうやって取ってくるか考え中。
+          //暫定的にnullにする。
           aProperty.SetValue(aRecord, _aCaster.CastToPropertyType(viewColumnValue, aViewColumnInfo, aProperty.PropertyType), null);
         }
 
