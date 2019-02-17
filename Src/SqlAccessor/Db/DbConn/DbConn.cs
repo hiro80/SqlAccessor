@@ -372,6 +372,20 @@ namespace SqlAccessor
       }
     }
 
+    private int ExecSqlImp(string sql, PlaceHolders placeHolders, IEnumerable<string> updateTables) {
+      //Commandオブジェクトを生成する
+      DbCommand aDbCommand = this.CreateDbCommand(sql, _aDbConnection, _aDbTransaction);
+
+      foreach(var ph in placeHolders) {
+        DbParameter aDbParameter = aDbCommand.CreateParameter();
+        aDbParameter.Direction = System.Data.ParameterDirection.Input;
+        aDbParameter.ParameterName = ph.Key;
+        aDbParameter.Value = ph.Value;
+        aDbCommand.Parameters.Add(aDbParameter);
+      }
+
+    }
+
     public bool IsAvailable() {
       return object.ReferenceEquals(_state, NoTransaction.GetInstance());
     }
@@ -437,6 +451,10 @@ namespace SqlAccessor
     public int ExecSql(string sql
                      , IEnumerable<string> updateTables) {
       return _state.ExecSql(this, sql, updateTables);
+    }
+
+    public int ExecSql(string sql, PlaceHolders placeHolders, IEnumerable<string> updateTables) {
+      return _state.ExecSql(this, sql, placeHolders, updateTables);
     }
 
     //論理式を評価する
