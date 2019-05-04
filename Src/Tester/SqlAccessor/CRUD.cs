@@ -715,62 +715,6 @@ namespace SqlAccessorTester
     }
 
     [Test]
-    public void CommitAtFinalizing() {
-      var param = new DbParameters();
-      // GCによる終了処理ではCOMMITが行われるよう設定する
-      param.CommitAtFinalizing = true;
-      param.SqlPodsDir = _sqlPodsDir;
-      param.DebugPrint = true;
-
-      var db = new Db(_dbms, _connectStr, param);
-      var tran = db.CreateTran();
-
-      tran.Save(new Person(5, "長尾景虎", new DateTime(1530, 2, 18), 155.01M, 70.5M, true, "毘沙門天"));
-
-      // Dispose()未実行のためGCにより終了処理が行われる
-      tran = null;
-      db = null;
-
-      // GCの強制実行
-      System.GC.Collect();
-
-      // Save()のCOMMITが行われたのでレコードは格納されている
-      var person = new Person();
-      person.Id = 5;
-      db = new Db(_dbms, _connectStr, param);
-      Assert.That(db.Count(person), Is.EqualTo(1));
-
-      db.Dispose();
-    }
-
-    [Test]
-    public void RollbackAtFinalizing() {
-      var param = new DbParameters();
-      // GCによる終了処理ではROLLBACKが行われるよう設定する
-      param.CommitAtFinalizing = false;
-      param.SqlPodsDir = _sqlPodsDir;
-      param.DebugPrint = true;
-
-      var db = new Db(_dbms, _connectStr, param);
-      var tran = db.CreateTran();
-
-      tran.Save(new Person(5, "長尾景虎", new DateTime(1530, 2, 18), 155.01M, 70.5M, true, "毘沙門天"));
-
-      // Dispose()未実行のためGCにより終了処理が行われる
-      tran = null;
-      db = null;
-
-      // GCの強制実行
-      System.GC.Collect();
-
-      // Save()のRollbackが行われたのでレコードは格納されていない
-      var person = new Person();
-      person.Id = 5;
-      db = new Db(_dbms, _connectStr, param);
-      Assert.That(db.Count(person), Is.EqualTo(0));
-    }
-
-    [Test]
     public void Argument_IsNot_Modified1() {
       // 引数の値が変更されていないこと
 
