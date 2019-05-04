@@ -21,12 +21,14 @@ DBに格納されているデータをレコードに格納するために、そ
 <?xml version="1.0" encoding="UTF-8"?>
 <sqlPod>
   <Find><![CDATA[
+
   SELECT
     PersonId                     AS Id
    ,FirstName || ' ' || LastName AS Name
    ,BirthDay                     AS BirthDay
   FROM
     Persons
+
   ]]></Find>
 </sqlPod>
 ```
